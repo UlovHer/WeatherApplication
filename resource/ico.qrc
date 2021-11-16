@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="cloud_32">
+    <file>cloud_32.ico</file>
+  </qresource>
+</RCC>

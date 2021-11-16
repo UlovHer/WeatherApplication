@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>812</width>
+    <height>568</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>城市天气</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resource/ico.qrc">
+    <normaloff>:/cloud_32/cloud_32.ico</normaloff>:/cloud_32/cloud_32.ico</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>40</y>
+        <width>481</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>481</width>
+         <height>251</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>气温变化图</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>296</y>
+        <width>771</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string>日期</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>天气</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>高温</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>低温</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>日出</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>日落</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AQI</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>风向</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>风力</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>注意事项</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QTextEdit" name="resText">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>45</y>
+        <width>291</width>
+        <height>245</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="queryBtn">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>10</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Query</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="select_label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>50</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>选择城市</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="city_box">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>10</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="province_box">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>10</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="country_box">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>10</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>60</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>中国</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="country_label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>50</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>国家:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="province_label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>229</x>
+        <y>10</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>省/直辖市:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="county_box">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>10</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="city_label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>10</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>市:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="county_label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>10</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>区/县:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resource/ico.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>queryBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
